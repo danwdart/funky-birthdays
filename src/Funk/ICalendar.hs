@@ -1,15 +1,16 @@
+{-# LANGUAGE UnicodeSyntax #-}
 
 module Funk.ICalendar (generateICal) where
 
 import qualified Data.ByteString.Lazy.Char8 as BSL
-import Data.Default
-import Data.Map
-import Data.Text.Lazy as T
-import Data.Time (UTCTime)
-import Funk.Map
-import Text.ICalendar
+import           Data.Default
+import           Data.Map
+import           Data.Text.Lazy             as T
+import           Data.Time                  (UTCTime)
+import           Funk.Map
+import           Text.ICalendar
 
-generateICal :: Map String UTCTime -> BSL.ByteString
+generateICal ∷ Map String UTCTime → BSL.ByteString
 generateICal mapNameToTime = printICalendar def def {
     vcEvents = mapMap (\(name, utctime) -> (
         ( T.pack name, Just $ Right $ UTCDateTime utctime),

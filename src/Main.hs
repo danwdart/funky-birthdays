@@ -1,12 +1,13 @@
+{-# LANGUAGE UnicodeSyntax #-}
 module Main where
 
 import qualified Data.ByteString.Lazy.Char8 as BSL
-import Data.DateTime (getCurrentTime)
-import Data.Map
-import Funk.ICalendar
-import Funk.Utils (untilEnd)
+import           Data.DateTime              (getCurrentTime)
+import           Data.Map
+import           Funk.ICalendar
+import           Funk.Utils                 (untilEnd)
 
-main :: IO ()
+main ∷ IO ()
 main = do
     now <- getCurrentTime
     let ical = generateICal . fromList . untilEnd $ now

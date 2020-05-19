@@ -1,14 +1,15 @@
+{-# LANGUAGE UnicodeSyntax #-}
 module Funk.Data (times, people) where
 
-import Data.DateTime (fromGregorian)
-import Funk.Constants (secondsInDay)
-import Funk.Conversion (daysToSeconds, yearsToSeconds)
-import Funk.Ranges (upToMax)
-import Funk.Round (roundNumbers)
-import Funk.Types (Row, PersonData)
+import           Data.DateTime   (fromGregorian)
+import           Funk.Constants  (secondsInDay)
+import           Funk.Conversion (daysToSeconds, yearsToSeconds)
+import           Funk.Ranges     (upToMax)
+import           Funk.Round      (roundNumbers)
+import           Funk.Types      (PersonData, Row)
 
 
-times :: [Row]
+times ∷ [Row]
 times = [
     ("Seconds", 1, roundNumbers),
     ("Minutes", 60, roundNumbers),
@@ -40,8 +41,8 @@ times = [
     ("Poseidean (Neptunian) Days", daysToSeconds 0.67, roundNumbers),
     ("Poseidean (Neptunian) Years", yearsToSeconds 164.79, roundNumbers)
     ]
-    
-people :: [PersonData]
+
+people ∷ [PersonData]
 people = [
     ("Dan", fromGregorian 1991 6 4 1 20 0),
     ("Colin", fromGregorian 1991 6 10 0 0 0),
