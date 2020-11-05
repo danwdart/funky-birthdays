@@ -18,7 +18,7 @@ birthTimes = do
     (timename, secs, numbers) <- times
     number <- numbers
 
-    return (name ++ ": " ++ show number ++ " " ++ timename, addSeconds (number * secs) bdtime)
+    return (name <> (": " <> (show number <> (" " <> timename))), addSeconds (number * secs) bdtime)
 
 untilEnd ∷ UTCTime → [DateNameTime]
 untilEnd now = do

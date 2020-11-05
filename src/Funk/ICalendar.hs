@@ -13,7 +13,7 @@ import           Text.ICalendar
 generateICal ∷ Map String UTCTime → BSL.ByteString
 generateICal mapNameToTime = printICalendar def def {
     vcEvents = mapMap (\(name, utctime) -> (
-        ( T.pack name, Just $ Right $ UTCDateTime utctime),
+        ( T.pack name, Just . Right $ UTCDateTime utctime),
         (
             VEvent {
                 veDTStamp = DTStamp {
