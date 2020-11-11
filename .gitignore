@@ -6,3 +6,4 @@ google.json
 events.ics
 *.hi
 *.o
+node_modules

@@ -1,0 +1,27 @@
+{
+  "name": "funky-birthdays",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/danwdart/funky-birthdays.git"
+  },
+  "keywords": [
+    "funky",
+    "birthdays"
+  ],
+  "author": "Dan Dart <npm@dandart.co.uk>",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/danwdart/funky-birthdays/issues"
+  },
+  "homepage": "https://github.com/danwdart/funky-birthdays#readme",
+  "dependencies": {
+    "serverless": "^2.11.1",
+    "serverless-haskell": "^0.12.4"
+  }
+}
