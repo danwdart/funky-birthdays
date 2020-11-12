@@ -1,0 +1,33 @@
+service: funky-birthdays
+
+provider:
+  name: aws
+  region: eu-west-2
+  runtime: haskell
+  environment:
+    LANG: en_GB.UTF-8
+    LC_ALL: en_GB.UTF-8
+  apiGateway:
+    shouldStartNameWithService: true
+
+functions:
+  funky-birthdays:
+    handler: funky-birthdays.funky-birthdays-api
+    events:
+      - http:
+          path: /funky-birthdays
+          method: get
+
+plugins:
+  - serverless-haskell
+  - serverless-offline
+
+custom:
+  haskell:
+    docker: true
+    stackBuildArgs:
+      - --allow-different-user
+  serverless-offline:
+    # useDocker: true
+    # useChildProcesses: true
+    printOutput: true
