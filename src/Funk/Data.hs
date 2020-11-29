@@ -44,7 +44,7 @@ times = [
 
 people ∷ [PersonData]
 people = [
-    ("Dan", fromGregorian 1991 6 4 1 20 0),
+    ("Dan", fromGregorian 1991 6 4 0 37 0),
     ("Colin", fromGregorian 1991 6 10 0 0 0),
     ("Kaychan", fromGregorian 1992 11 18 23 0 0)
     ]
