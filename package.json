@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/danwdart/funky-birthdays#readme",
   "dependencies": {
-    "serverless": "^2.13.0-9399f2b8",
+    "serverless": "^2.14.0",
     "serverless-haskell": "^0.12.4",
     "serverless-offline": "^6.8.0"
   }

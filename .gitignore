@@ -7,3 +7,6 @@ events.ics
 *.hi
 *.o
 node_modules
+bootstrap
+funky-birthdays-api
+.serverless
