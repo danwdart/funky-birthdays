@@ -6,3 +6,6 @@ google.json
 events.ics
 *.hi
 *.o
+hie.yaml
+result*
+.direnv
