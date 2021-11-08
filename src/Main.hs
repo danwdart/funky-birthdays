@@ -4,8 +4,8 @@ module Main where
 import qualified Data.ByteString.Lazy.Char8 as BSL
 import           Data.DateTime              (getCurrentTime)
 import           Data.Map
-import           Funk.ICalendar
-import           Funk.Utils                 (untilEnd)
+import           ICalendar
+import           Utils                 (untilEnd)
 
 main ∷ IO ()
 main = do

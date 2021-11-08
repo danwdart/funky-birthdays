@@ -6,18 +6,43 @@ license:             AGPL-3.0-only
 build-type:          Simple
 extra-source-files:  CHANGELOG.md
 
+library
+  hs-source-dirs:      lib
+  exposed-modules:     Constants
+                     , Conversion
+                     , Data
+                     , ICalendar
+                     , Map
+                     , Ranges
+                     , Round
+                     , Types
+                     , Utils
+  build-depends:       base >=4.15 && <5
+                     , bytestring
+                     , containers
+                     , data-default
+                     , datetime
+                     , iCalendar
+                     , numeric-prelude
+                     , text
+                     , time
+                     , uuid
+  default-language:    Haskell2010
+  ghc-options:         -Wall -Werror -threaded -rtsopts -with-rtsopts=-N
+
 executable funky-birthdays
   main-is:             Main.hs
-  other-modules:       Funk.Constants
-                     , Funk.Conversion
-                     , Funk.Data
-                     , Funk.ICalendar
-                     , Funk.Map
-                     , Funk.Ranges
-                     , Funk.Round
-                     , Funk.Types
-                     , Funk.Utils
-  build-depends:       base >=4.15 && <5, bytestring, containers, data-default, datetime, iCalendar, text, time, uuid
+  build-depends:       base >=4.15 && <5
+                     , bytestring
+                     , containers
+                     , data-default
+                     , datetime
+                     , funky-birthdays
+                     , iCalendar
+                     , numeric-prelude
+                     , text
+                     , time
+                     , uuid
   hs-source-dirs:      src
   default-language:    Haskell2010
   ghc-options:         -Wall -Werror -threaded -rtsopts -with-rtsopts=-N

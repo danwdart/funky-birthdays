@@ -1,7 +1,7 @@
 {-# LANGUAGE UnicodeSyntax #-}
-module Funk.Ranges (upToMax) where
+module Ranges (upToMax) where
 
-import           Funk.Types (DayOfInterest)
+import           Types (DayOfInterest)
 
 maxForOne ∷ DayOfInterest
 maxForOne = 1000

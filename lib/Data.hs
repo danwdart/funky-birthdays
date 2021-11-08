@@ -1,26 +1,26 @@
 {-# LANGUAGE UnicodeSyntax #-}
-module Funk.Data (times, people) where
+module Data (times, people) where
 
-import           Data.DateTime   (fromGregorian)
-import           Funk.Constants  (secondsInDay)
-import           Funk.Conversion (daysToSeconds, yearsToSeconds)
-import           Funk.Ranges     (upToMax)
-import           Funk.Round      (roundNumbers)
-import           Funk.Types      (PersonData, Row)
-
+import           Data.DateTime
+import           Constants
+import           Conversion
+import           Ranges     (upToMax)
+import           Round      (roundNumbers)
+import           Types      (PersonData, Row)
+import           Number.SI.Unit
 
 times ∷ [Row]
 times = [
     ("Seconds", 1, roundNumbers),
-    ("Minutes", 60, roundNumbers),
-    ("Hours", 3600, roundNumbers),
-    ("Days", secondsInDay, roundNumbers),
-    ("Weeks", 7 * secondsInDay, roundNumbers),
-    ("Sidereal Years",  31558150, upToMax),
-    ("Average Calendar Years", 31556952, upToMax),
-    ("Common Calendar Years", 31536000, upToMax),
-    ("Julian Astronomical Years", 31557600, upToMax),
-    ("Leap Calendar Years", 31622400, upToMax),
+    ("Minutes", floor (secondsPerMinute :: Double), roundNumbers),
+    ("Hours", floor (secondsPerHour :: Double), roundNumbers),
+    ("Days", floor (secondsPerDay :: Double), roundNumbers),
+    ("Weeks", 7 * floor (secondsPerDay :: Double), roundNumbers),
+    ("Sidereal Years",  secondsInSiderealYear, upToMax),
+    ("Average Calendar Years", secondsInAverageCalendarYear, upToMax),
+    ("Common Calendar Years", secondsInCommonCalendarYear, upToMax),
+    ("Julian Astronomical Years", secondsInJulianAstronomicalYear, upToMax),
+    ("Leap Calendar Years", secondsInLeapCalendarYear, upToMax),
     ("Average Draconitic Months", daysToSeconds 27.212220815, roundNumbers),
     ("Average Tropical Months", daysToSeconds 27.321582252, roundNumbers),
     ("Average Sidereal Months", daysToSeconds 27.321661554, roundNumbers),

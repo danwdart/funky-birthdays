@@ -1,5 +1,5 @@
 {-# LANGUAGE UnicodeSyntax #-}
-module Funk.Map (mapMap, mapMap2) where
+module Map (mapMap, mapMap2) where
 
 import           Data.Bifunctor
 import           Data.Map
