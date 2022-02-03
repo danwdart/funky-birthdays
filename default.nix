@@ -36,13 +36,13 @@ let
       apply-refact
       cabal-install
       ghcid
-      ghcide
-      haskell-language-server
+      # ghcide # issue with 9.0.2
+      # haskell-language-server # issue with 9.0.2
       hasktags
       hlint
       implicit-hie
       krank
-      haskellPackages.stan # issue with 9.0.1
+      stan
       stylish-haskell
       weeder
     ];
