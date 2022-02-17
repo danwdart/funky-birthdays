@@ -5,7 +5,7 @@ import qualified Data.ByteString.Lazy.Char8 as BSL
 import           Data.DateTime              (getCurrentTime)
 import           Data.Map
 import           ICalendar
-import           Utils                 (untilEnd)
+import           Utils                      (untilEnd)
 
 main ∷ IO ()
 main = do

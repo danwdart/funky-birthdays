@@ -1,13 +1,13 @@
 {-# LANGUAGE UnicodeSyntax #-}
 module Data (times, people) where
 
-import           Data.DateTime
 import           Constants
 import           Conversion
-import           Ranges     (upToMax)
-import           Round      (roundNumbers)
-import           Types      (PersonData, Row)
+import           Data.DateTime
 import           Number.SI.Unit
+import           Ranges         (upToMax)
+import           Round          (roundNumbers)
+import           Types          (PersonData, Row)
 
 times ∷ [Row]
 times = [

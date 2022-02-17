@@ -1,12 +1,12 @@
 {-# LANGUAGE UnicodeSyntax #-}
 module Utils (untilEnd) where
 
+import           Data           (people, times)
 import           Data.DateTime
 import           Data.List      (sortOn)
 import           Data.Time
-import           Data      (people, times)
 import           Number.SI.Unit
-import           Types     (DateNameTime)
+import           Types          (DateNameTime)
 
 filterDays ∷ UTCTime → UTCTime → [DateNameTime] → [DateNameTime]
 filterDays fromDay untilDay = takeWhile ((<= untilDay) . snd) . dropWhile ((<= fromDay) . snd)
