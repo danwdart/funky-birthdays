@@ -10,7 +10,7 @@ let
   lib = nixpkgs.pkgs.haskell.lib;
   myHaskellPackages = nixpkgs.pkgs.haskell.packages.${compiler}.override {
     overrides = self: super: rec {
-      funky-birthdays = self.callCabal2nix "funky-birthdays" (gitignore ./.) {};
+      funky-birthdays = lib.dontHaddock (self.callCabal2nix "funky-birthdays" (gitignore ./.) {});
       # Don't know why I need a doJailbreak in here, the version restriction of base
       # looks up-to-date in the repository.
       # https://github.com/stackbuilders/datetime/pull/13
