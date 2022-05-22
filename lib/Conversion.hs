@@ -1,4 +1,3 @@
-{-# LANGUAGE UnicodeSyntax #-}
 module Conversion (daysToSeconds, yearsToSeconds) where
 
 import           Constants      (secondsInAverageCalendarYear)

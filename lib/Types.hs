@@ -1,4 +1,3 @@
-{-# LANGUAGE UnicodeSyntax #-}
 module Types (PersonName, DayOfInterest, NameOfTimeframe, DateName, SecondsPerTimeframe, Row, PersonData, DateNameTime) where
 
 import           Data.Time (UTCTime)

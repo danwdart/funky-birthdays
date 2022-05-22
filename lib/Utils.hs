@@ -1,4 +1,3 @@
-{-# LANGUAGE UnicodeSyntax #-}
 module Utils (untilEnd) where
 
 import           Data           (people, times)

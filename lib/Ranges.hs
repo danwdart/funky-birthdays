@@ -1,4 +1,3 @@
-{-# LANGUAGE UnicodeSyntax #-}
 module Ranges (upToMax) where
 
 import           Types (DayOfInterest)

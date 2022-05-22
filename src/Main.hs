@@ -1,4 +1,3 @@
-{-# LANGUAGE UnicodeSyntax #-}
 module Main where
 
 import qualified Data.ByteString.Lazy.Char8 as BSL
