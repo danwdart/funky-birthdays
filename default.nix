@@ -1,5 +1,5 @@
 { 
-  nixpkgs ? import <unstable> {},
+  nixpkgs ? import (builtins.fetchTarball "https://github.com/NixOS/nixpkgs/archive/haskell-updates.tar.gz") {},
   haskell-tools ? import (builtins.fetchTarball "https://github.com/danwdart/haskell-tools/archive/master.tar.gz") {},
   # https://github.com/chrra/iCalendar/issues/48
   compiler ? "ghc902"
