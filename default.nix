@@ -1,6 +1,9 @@
 { 
-  nixpkgs ? import (builtins.fetchTarball "https://github.com/NixOS/nixpkgs/archive/haskell-updates.tar.gz") {},
-  haskell-tools ? import (builtins.fetchTarball "https://github.com/danwdart/haskell-tools/archive/master.tar.gz") {},
+  nixpkgs ? import <nixpkgs> {},
+  haskell-tools ? import (builtins.fetchTarball "https://github.com/danwdart/haskell-tools/archive/master.tar.gz") {
+    nixpkgs = nixpkgs;
+    compiler = compiler;
+  },
   # https://github.com/chrra/iCalendar/issues/48
   compiler ? "ghc902"
 } :
@@ -41,8 +44,6 @@ let
 in
 {
   inherit shell;
-  inherit exe;
-  inherit myHaskellPackages;
-  funky-birthdays = myHaskellPackages.funky-birthdays;
+  funky-birthdays = lib.justStaticExecutables (myHaskellPackages.funky-birthdays);
 }
 
