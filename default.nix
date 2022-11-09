@@ -5,7 +5,7 @@
     compiler = compiler;
   },
   # https://github.com/chrra/iCalendar/issues/48
-  compiler ? "ghc902"
+  compiler ? "ghc90"
 } :
 let
   gitignore = nixpkgs.nix-gitignore.gitignoreSourcePure [ ./.gitignore ];
