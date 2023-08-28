@@ -21,12 +21,6 @@ let
         url = "https://github.com/l29ah/datetime.git";
         ref = "time-1.11";
       }) {});
-      # Don't know why doJailbreak does nothing here?
-      # https://github.com/chrra/iCalendar/pull/46
-      #iCalendar = lib.doJailbreak (self.callCabal2nix "iCalendar" (builtins.fetchGit {
-      #  url = "https://github.com/markus1189/iCalendar.git";
-      #  ref = "update-bounds";
-      #}) {});
     };
   };
   shell = myHaskellPackages.shellFor {
