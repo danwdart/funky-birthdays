@@ -17,7 +17,7 @@ library
                      , Round
                      , Types
                      , Utils
-  build-depends:       base >= 4.15.1.0 && <5
+  build-depends:       base >= 4.17.0.0 && <5
                      , bytestring
                      , containers
                      , data-default
@@ -35,13 +35,13 @@ library
                        -Wno-missing-export-lists
                        -Wno-implicit-prelude
                        -Wno-missing-safe-haskell-mode
-                       -- -Wno-missing-kind-signatures -- only works on recent ghc
+                       -Wno-missing-kind-signatures
                        -Wno-prepositive-qualified-module
                        -Wno-missing-local-signatures
 
 executable funky-birthdays
   main-is:             Main.hs
-  build-depends:       base >= 4.15.1.0 && <5
+  build-depends:       base >= 4.17.0.0 && <5
                      , bytestring
                      , containers
                      , datetime
@@ -56,6 +56,6 @@ executable funky-birthdays
                        -Wno-missing-export-lists
                        -Wno-implicit-prelude
                        -Wno-missing-safe-haskell-mode
-                       -- -Wno-missing-kind-signatures -- only works on recent ghc
+                       -Wno-missing-kind-signatures
                        -Wno-prepositive-qualified-module
                        -Wno-missing-local-signatures

@@ -4,8 +4,7 @@
     nixpkgs = nixpkgs;
     compiler = compiler;
   },
-  # https://github.com/chrra/iCalendar/issues/48
-  compiler ? "ghc90"
+  compiler ? "ghc94"
 } :
 let
   gitignore = nixpkgs.nix-gitignore.gitignoreSourcePure [ ./.gitignore ];
@@ -20,6 +19,13 @@ let
       datetime = lib.doJailbreak (self.callCabal2nix "datetime" (builtins.fetchGit {
         url = "https://github.com/l29ah/datetime.git";
         ref = "time-1.11";
+      }) {});
+      # Don't know why doJailbreak does nothing here?
+      # https://github.com/chrra/iCalendar/issues/48
+      # https://github.com/chrra/iCalendar/pull/51
+      iCalendar = lib.doJailbreak (self.callCabal2nix "iCalendar" (builtins.fetchGit {
+        url = "https://github.com/zenhack/iCalendar.git";
+        ref = "update-deps";
       }) {});
     };
   };
