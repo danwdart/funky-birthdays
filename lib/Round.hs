@@ -1,6 +1,6 @@
 module Round (roundNumbers) where
 
-import           Data.List (sort)
+import Data.List (sort)
 
 roundDecimal ∷ [Integer]
 roundDecimal = (*) <$> [10 ^ n | n <- [0..10] :: [Int]] <*> [1..9]

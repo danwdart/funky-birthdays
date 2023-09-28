@@ -1,13 +1,13 @@
 
 module ICalendar (generateICal) where
 
-import qualified Data.ByteString.Lazy.Char8 as BSL
-import           Data.Default
-import           Data.Map
-import           Data.Text.Lazy             as T
-import           Data.Time                  (UTCTime)
-import           Map
-import           Text.ICalendar
+import Data.ByteString.Lazy.Char8 qualified as BSL
+import Data.Default
+import Data.Map
+import Data.Text.Lazy             as T
+import Data.Time                  (UTCTime)
+import Map
+import Text.ICalendar
 
 generateICal ∷ Map String UTCTime → BSL.ByteString
 generateICal mapNameToTime = printICalendar def def {
