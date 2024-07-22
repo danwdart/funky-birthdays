@@ -40,8 +40,7 @@ let
     buildInputs = tools.defaultBuildTools;
     withHoogle = false;
   };
-  exe = lib.justStaticExecutables (myHaskellPackages.funky-birthdays);
-in
+  in
 {
   inherit shell;
   funky-birthdays = lib.justStaticExecutables (myHaskellPackages.funky-birthdays);
