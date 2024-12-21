@@ -2,7 +2,6 @@ module Data (times, people) where
 
 import Constants
 import Conversion
-import Data.DateTime
 import Number.SI.Unit
 import Ranges         (upToMax)
 import Round          (roundNumbers)
@@ -43,7 +42,7 @@ times = [
 
 people ∷ [PersonData]
 people = [
-    ("Dan", fromGregorian 1991 6 4 0 37 0),
-    ("Colin", fromGregorian 1991 6 10 0 0 0),
-    ("Raven", fromGregorian 1992 11 19 0 0 0)
+    ("Dan", read "1991-06-04 00:37:00"),
+    ("Colin", read "1991-06-10 00:00:00"),
+    ("Raven", read "1992-11-19 00:00:00")
     ]

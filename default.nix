@@ -4,7 +4,7 @@
     nixpkgs = nixpkgs;
     compiler = compiler;
   },
-  compiler ? "ghc94"
+  compiler ? "ghc910"
 } :
 let
   gitignore = nixpkgs.nix-gitignore.gitignoreSourcePure [ ./.gitignore ];
@@ -13,19 +13,10 @@ let
   myHaskellPackages = nixpkgs.pkgs.haskell.packages.${compiler}.override {
     overrides = self: super: rec {
       funky-birthdays = lib.dontHaddock (self.callCabal2nix "funky-birthdays" (gitignore ./.) {});
-      # Don't know why I need a doJailbreak in here, the version restriction of base
-      # looks up-to-date in the repository.
-      # https://github.com/stackbuilders/datetime/pull/13
-      datetime = lib.doJailbreak (self.callCabal2nix "datetime" (builtins.fetchGit {
-        url = "https://github.com/l29ah/datetime.git";
-        ref = "time-1.11";
-      }) {});
-      # Don't know why doJailbreak does nothing here?
-      # https://github.com/chrra/iCalendar/issues/48
-      # https://github.com/chrra/iCalendar/pull/51
+      # Not yet released - https://github.com/chrra/iCalendar/issues/52
       iCalendar = lib.doJailbreak (self.callCabal2nix "iCalendar" (builtins.fetchGit {
-        url = "https://github.com/zenhack/iCalendar.git";
-        ref = "update-deps";
+        url = "https://github.com/chrra/iCalendar.git";
+        ref = "master";
       }) {});
     };
   };

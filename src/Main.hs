@@ -1,8 +1,8 @@
 module Main (main) where
 
 import Data.ByteString.Lazy.Char8 qualified as BSL
-import Data.DateTime              (getCurrentTime)
 import Data.Map
+import Data.Time.Clock
 import ICalendar
 import Utils                      (untilEnd)
 
