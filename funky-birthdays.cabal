@@ -26,7 +26,7 @@ library
     , containers
     , data-default
     -- , datetime
-    , iCalendar
+    , iCalendar        >=0.4.1.1 && <0.5
     , numeric-prelude
     , text
     , time

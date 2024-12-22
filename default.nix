@@ -13,11 +13,17 @@ let
   myHaskellPackages = nixpkgs.pkgs.haskell.packages.${compiler}.override {
     overrides = self: super: rec {
       funky-birthdays = lib.dontHaddock (self.callCabal2nix "funky-birthdays" (gitignore ./.) {});
-      # Not yet released - https://github.com/chrra/iCalendar/issues/52
-      iCalendar = lib.doJailbreak (self.callCabal2nix "iCalendar" (builtins.fetchGit {
-        url = "https://github.com/chrra/iCalendar.git";
-        ref = "master";
-      }) {});
+      # Not yet in nix and callHackage didn't work
+      # Requires allowing containers 0.7 - see conversation at https://github.com/chrra/iCalendar/issues/52
+      iCalendar = lib.doJailbreak (self.callHackageDirect {
+        pkg = "iCalendar";
+        ver = "0.4.1.1";
+        sha256 = "sha256-jSi0JyCNl8B2gfrU447AIMe8uev/EQpwYdWGI7jY19U=";
+      } {});
+      # iCalendar = self.callCabal2nix "iCalendar" (builtins.fetchGit {
+      #   url = "https://github.com/chrra/iCalendar.git";
+      #   ref = "master";
+      # }) {};
     };
   };
   shell = myHaskellPackages.shellFor {
