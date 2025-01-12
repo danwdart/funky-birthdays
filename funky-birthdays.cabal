@@ -31,6 +31,7 @@ library
     , text
     , time
 
+  -- , datetime
   default-language:   GHC2021
   default-extensions:
     DerivingStrategies
@@ -52,10 +53,10 @@ executable funky-birthdays
     , base             >=4.20.0.0 && <5
     , bytestring
     , containers
-    -- , datetime
     , funky-birthdays
     , time
 
+  -- , datetime
   hs-source-dirs:     src
   default-language:   GHC2021
   default-extensions:

@@ -6,7 +6,7 @@ import Data.Time
 import Number.SI.Unit
 import Types          (DateNameTime)
 
-addSeconds :: Integer -> UTCTime -> UTCTime
+addSeconds ∷ Integer → UTCTime → UTCTime
 addSeconds = addUTCTime . secondsToNominalDiffTime . fromIntegral
 
 filterDays ∷ UTCTime → UTCTime → [DateNameTime] → [DateNameTime]
