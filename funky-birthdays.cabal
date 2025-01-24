@@ -25,12 +25,12 @@ library
     , bytestring
     , containers
     , data-default
-    -- , datetime
-    , iCalendar        >=0.4.1.1 && <0.5
+    , iCalendar        >=0.4.1.1  && <0.5
     , numeric-prelude
     , text
     , time
 
+  -- , datetime
   -- , datetime
   default-language:   GHC2021
   default-extensions:

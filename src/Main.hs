@@ -11,4 +11,3 @@ main = do
     now <- getCurrentTime
     let ical = generateICal . fromList . untilEnd $ now
     BSL.writeFile "events.ics" ical
-    putStrLn "Wrote events.ics"
