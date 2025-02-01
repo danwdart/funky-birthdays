@@ -3,3 +3,4 @@ packages: *
 --   type: git
 --   location: https://github.com/chrra/iCalendar.git
 --   tag: master
+allow-newer: time

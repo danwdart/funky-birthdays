@@ -21,14 +21,14 @@ library
     Utils
 
   build-depends:
-    , base             >=4.20.0.0 && <5
-    , bytestring
-    , containers
-    , data-default
-    , iCalendar        >=0.4.1.1  && <0.5
-    , numeric-prelude
-    , text
-    , time
+    , base             ^>=4.20.0.0
+    , bytestring       ^>=0.12.2.0
+    , containers       ^>=0.7
+    , data-default     ^>=0.8.0.0
+    , iCalendar        ^>=0.4.1.1
+    , numeric-prelude  ^>=0.4.4
+    , text             ^>=2.1.2
+    , time             ^>=1.14
 
   -- , datetime
   -- , datetime
@@ -50,11 +50,11 @@ library
 executable funky-birthdays
   main-is:            Main.hs
   build-depends:
-    , base             >=4.20.0.0 && <5
-    , bytestring
-    , containers
+    , base             ^>=4.20.0.0
+    , bytestring       ^>=0.12.2.0
+    , containers       ^>=0.7
     , funky-birthdays
-    , time
+    , time             ^>=1.14
 
   -- , datetime
   hs-source-dirs:     src
