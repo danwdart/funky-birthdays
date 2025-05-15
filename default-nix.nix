@@ -4,7 +4,7 @@
     nixpkgs = nixpkgs;
     compiler = compiler;
   },
-  compiler ? "ghc910"
+  compiler ? "ghc912"
 } :
 let
   gitignore = nixpkgs.nix-gitignore.gitignoreSourcePure [ ./.gitignore ];
@@ -14,7 +14,7 @@ let
     overrides = self: super: rec {
       funky-birthdays = lib.dontHaddock (self.callCabal2nix "funky-birthdays" (gitignore ./.) {});
       # Not yet in nix and callHackage didn't work
-      # Requires allowing containers 0.7 - see conversation at https://github.com/chrra/iCalendar/issues/52
+      # Requires allowing containers 0.8 - see conversation at https://github.com/chrra/iCalendar/issues/52
       iCalendar = lib.doJailbreak (self.callHackageDirect {
         pkg = "iCalendar";
         ver = "0.4.1.1";
