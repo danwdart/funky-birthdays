@@ -59,6 +59,8 @@ executable funky-birthdays
 
   -- , datetime
   hs-source-dirs:     src
+  if arch(javascript)
+    js-sources: jsbits/emcc-config.js
   default-language:   GHC2021
   default-extensions:
     DerivingStrategies
