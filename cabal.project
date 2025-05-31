@@ -4,3 +4,4 @@ packages: *
 --   location: https://github.com/chrra/iCalendar.git
 --   tag: master
 allow-newer: time, containers
+constraints: reflex-dom +use-warp -webkit2gtk

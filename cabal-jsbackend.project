@@ -2,3 +2,4 @@ packages: *
 with-compiler: javascript-unknown-ghcjs-ghc
 with-hc-pkg: javascript-unknown-ghcjs-ghc-pkg
 allow-newer: time, containers
+constraints: reflex-dom +use-warp -webkit2gtk
