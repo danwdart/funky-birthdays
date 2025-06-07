@@ -1,4 +1,4 @@
-# name: Haskell Release Dev
+name: Haskell Release Dev
 on:
   push:
     branches: [ "main" ]
