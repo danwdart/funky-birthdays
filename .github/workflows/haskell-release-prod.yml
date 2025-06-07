@@ -15,11 +15,14 @@ jobs:
       matrix:
         include:
           - os: ubuntu-latest
-            exeName: funky-birthdays-linux-x86_64
+            echoCalName: echoCal-linux-x86_64
+            writeCalName: writeCal-linux-x86_64
           - os: macOS-latest
-            exeName: funky-birthdays-darwin-aarch64
+            echoCalName: echoCal-darwin-aarch64
+            writeCalName: writeCal-darwin-aarch64
           - os: windows-latest
-            exeName: funky-birthdays-windows-x86_64.exe
+            echoCalName: echoCal-windows-x86_64.exe
+            writeCalName: writeCal-windows-x86_64.exe
         
     steps:
     - uses: actions/checkout@v4
@@ -57,7 +60,7 @@ jobs:
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: ${{ steps.get-path-echoCal.outputs.path }}
-        asset_name: ${{ matrix.exeName }}
+        asset_name: ${{ matrix.echoCalName }}
         tag: ${{ github.ref }}
         overwrite: true
         prerelease: true
@@ -70,7 +73,7 @@ jobs:
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: ${{ steps.get-path-writeCal.outputs.path }}
-        asset_name: ${{ matrix.exeName }}
+        asset_name: ${{ matrix.writeCalName }}
         tag: ${{ github.ref }}
         overwrite: true
         prerelease: true

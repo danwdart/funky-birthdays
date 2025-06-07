@@ -16,12 +16,14 @@ jobs:
       matrix:
         include:
           - os: ubuntu-latest
-            exeName: funky-birthdays-dev-linux-x86_64
+            echoCalName: echoCal-latest-linux-x86_64
+            writeCalName: writeCal-latest-linux-x86_64
           - os: macOS-latest
-            exeName: funky-birthdays-dev-darwin-aarch64
-          # configure: error: cannot guess build type; you must specify one
-          # - os: windows-latest
-          #   exeName: funky-birthdays-dev-windows-x86_64.exe
+            echoCalName: echoCal-latest-darwin-aarch64
+            writeCalName: writeCal-latest-darwin-aarch64
+          - os: windows-latest
+            echoCalName: echoCal-latest-windows-x86_64.exe
+            writeCalName: writeCal-latest-windows-x86_64.exe
         
     steps:
     - uses: actions/checkout@v4
@@ -59,7 +61,7 @@ jobs:
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: ${{ steps.get-path-echoCal.outputs.path }}
-        asset_name: ${{ matrix.exeName }}
+        asset_name: ${{ matrix.echoCalName }}
         tag: latest
         overwrite: true
         prerelease: true
@@ -72,7 +74,7 @@ jobs:
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: ${{ steps.get-path-writeCal.outputs.path }}
-        asset_name: ${{ matrix.exeName }}
+        asset_name: ${{ matrix.writeCalName }}
         tag: latest
         overwrite: true
         prerelease: true
