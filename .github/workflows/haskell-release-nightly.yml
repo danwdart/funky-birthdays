@@ -47,15 +47,28 @@ jobs:
       run: cabal new-build --enable-tests --enable-benchmarks all
     - name: Run tests
       run: cabal test all
-    - name: Get executable path
-      id: get-path
-      run: echo "path=$(cabal list-bin funky-birthdays)" >> $GITHUB_OUTPUT
+    - name: Get executable path of echoCal
+      id: get-path-echoCal
+      run: echo "path=$(cabal list-bin echoCal)" >> $GITHUB_OUTPUT
       shell: bash
-    - name: Upload binaries to release
+    - name: Upload echoCal binaries to release
       uses: svenstaro/upload-release-action@v2
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: ${{ steps.get-path.outputs.path }}
+        file: ${{ steps.get-path-echoCal.outputs.path }}
+        asset_name: ${{ matrix.exeName }}
+        tag: latest
+        overwrite: true
+        prerelease: true
+    - name: Get executable path of writeCal
+      id: get-path-writeCal
+      run: echo "path=$(cabal list-bin writeCal)" >> $GITHUB_OUTPUT
+      shell: bash
+    - name: Upload echoCal binaries to release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: ${{ steps.get-path-writeCal.outputs.path }}
         asset_name: ${{ matrix.exeName }}
         tag: latest
         overwrite: true
