@@ -69,7 +69,7 @@ htmlHead = do
 main ∷ IO ()
 main = mainWidgetWithHead htmlHead $
     mdo
-        el "header" $ text ""
+        el "header" $ blank
         el "main" $ do
             elAttr "div" [("class", "container")] $ do
                 elAttr "div" [("class", "px-4 py-5 my-3 text-center")] $ do
