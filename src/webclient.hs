@@ -18,7 +18,6 @@ Copyright notice
 -}
 
 {-# LANGUAGE CPP               #-}
-{-# LANGUAGE MonoLocalBinds    #-}
 {-# LANGUAGE OverloadedLists   #-}
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE RecursiveDo       #-}

@@ -32,10 +32,8 @@ library
 
   -- , datetime
   -- , datetime
-  default-language:   GHC2021
+  default-language:   GHC2024
   default-extensions:
-    DerivingStrategies
-    ImportQualifiedPost
     UnicodeSyntax
   if !arch(wasm32)
     ghc-options: -threaded
@@ -61,10 +59,8 @@ executable echoCal
   hs-source-dirs:     src
   if arch(javascript)
     js-sources: jsbits/emcc-config.js
-  default-language:   GHC2021
+  default-language:   GHC2024
   default-extensions:
-    DerivingStrategies
-    ImportQualifiedPost
     UnicodeSyntax
   if !arch(wasm32)
     ghc-options: -threaded -rtsopts -with-rtsopts=-N
@@ -90,10 +86,8 @@ executable writeCal
   hs-source-dirs:     src
   if arch(javascript)
     js-sources: jsbits/emcc-config.js
-  default-language:   GHC2021
+  default-language:   GHC2024
   default-extensions:
-    DerivingStrategies
-    ImportQualifiedPost
     UnicodeSyntax
   if !arch(wasm32)
     ghc-options: -threaded -rtsopts -with-rtsopts=-N
@@ -120,10 +114,8 @@ executable webclient
   hs-source-dirs:     src
   if arch(javascript)
     js-sources: jsbits/emcc-config.js
-  default-language:   GHC2021
+  default-language:   GHC2024
   default-extensions:
-    DerivingStrategies
-    ImportQualifiedPost
     UnicodeSyntax
   if !arch(wasm32)
     ghc-options: -threaded -rtsopts -with-rtsopts=-N
