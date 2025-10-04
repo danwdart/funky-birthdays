@@ -154,4 +154,6 @@ Count types:
         --         elAttr "span" [("class", "muted")] $
         --             text "Copyright © Dan Dart, 2025"
 
-
+#if defined(wasm32_HOST_ARCH)
+foreign export javascript "hs_start" main :: IO ()
+#endif

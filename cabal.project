@@ -22,5 +22,5 @@ source-repository-package
   tag: 2baa713dfc2e247d1f93380fcab443d9255f2bcb
   subdir: reflex-dom-core
 
-allow-newer: time, containers
+allow-newer: base, containers, ghc-bignum, ghc-experimental, template-haskell, time
 constraints: reflex-dom -use-warp -webkit2gtk

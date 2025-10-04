@@ -21,7 +21,7 @@ library
     Utils
 
   build-depends:
-    , base             ^>=4.21.0.0
+    , base             >=4.21.0.0 && <4.23.0.0
     , bytestring       ^>=0.12.2.0
     , containers       ^>=0.8
     , data-default     ^>=0.8.0.0
@@ -50,7 +50,7 @@ library
 executable echoCal
   main-is:            echoCal.hs
   build-depends:
-    , base             ^>=4.21.0.0
+    , base             >=4.21.0.0 && <4.23.0.0
     , bytestring       ^>=0.12.2.0
     , containers       ^>=0.8
     , funky-birthdays  ^>=0.2.0.0
@@ -80,7 +80,7 @@ executable echoCal
 executable writeCal
   main-is:            writeCal.hs
   build-depends:
-    , base             ^>=4.21.0.0
+    , base             >=4.21.0.0 && <4.23.0.0
     , bytestring       ^>=0.12.2.0
     , containers       ^>=0.8
     , funky-birthdays  ^>=0.2.0.0
@@ -113,7 +113,7 @@ executable webclient
 
   main-is:            webclient.hs
   build-depends:
-    , base        ^>=4.21.0.0
+    , base        >=4.21.0.0 && <4.23.0.0
     , reflex-dom  ^>=0.6.3.4
     , text        ^>=2.1.2
 
