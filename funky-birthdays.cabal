@@ -21,10 +21,10 @@ library
     Utils
 
   build-depends:
-    , base             >=4.21.0.0 && <4.23.0.0
-    , bytestring       ^>=0.12.2.0
+    , base             >=4.21 && <4.23
+    , bytestring       ^>=0.12.2
     , containers       ^>=0.8
-    , data-default     ^>=0.8.0.0
+    , data-default     ^>=0.8
     , iCalendar        ^>=0.4.1.1
     , numeric-prelude  ^>=0.4.4
     , text             ^>=2.1.2
@@ -50,10 +50,10 @@ library
 executable echoCal
   main-is:            echoCal.hs
   build-depends:
-    , base             >=4.21.0.0 && <4.23.0.0
-    , bytestring       ^>=0.12.2.0
+    , base             >=4.21 && <4.23
+    , bytestring       ^>=0.12.2
     , containers       ^>=0.8
-    , funky-birthdays  ^>=0.2.0.0
+    , funky-birthdays  ^>=0.2
     , time             ^>=1.15
 
   -- , datetime
@@ -80,10 +80,10 @@ executable echoCal
 executable writeCal
   main-is:            writeCal.hs
   build-depends:
-    , base             >=4.21.0.0 && <4.23.0.0
-    , bytestring       ^>=0.12.2.0
+    , base             >=4.21 && <4.23
+    , bytestring       ^>=0.12.2
     , containers       ^>=0.8
-    , funky-birthdays  ^>=0.2.0.0
+    , funky-birthdays  ^>=0.2
     , time             ^>=1.15
 
   -- , datetime
@@ -113,13 +113,13 @@ executable webclient
 
   main-is:            webclient.hs
   build-depends:
-    , base        >=4.21.0.0 && <4.23.0.0
+    , base        >=4.21 && <4.23
     , reflex-dom  ^>=0.6.3.4
     , text        ^>=2.1.2
 
-  -- , bytestring       ^>=0.12.2.0
+  -- , bytestring       ^>=0.12.2
   -- , containers       ^>=0.8
-  -- , funky-birthdays  ^>=0.2.0.0
+  -- , funky-birthdays  ^>=0.2
   hs-source-dirs:     src
 
   if arch(javascript)
