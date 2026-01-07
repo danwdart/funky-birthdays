@@ -5,21 +5,21 @@ packages: *
 --   tag: master
 
 -- https://github.com/haskellari/splitmix/pull/73
-source-repository-package
-  type: git
-  location: https://github.com/amesgen/splitmix
-  tag: cea9e31bdd849eb0c17611bb99e33d590e126164
+-- source-repository-package
+--   type: git
+--   location: https://github.com/amesgen/splitmix
+--   tag: cea9e31bdd849eb0c17611bb99e33d590e126164
 
 source-repository-package
   type: git
   location: https://github.com/reflex-frp/reflex-dom
-  tag: 2baa713dfc2e247d1f93380fcab443d9255f2bcb
+  tag: 97f08ae82335b9645ffd9ca89bf1187033265a9f
   subdir: reflex-dom
 
 source-repository-package
   type: git
   location: https://github.com/reflex-frp/reflex-dom
-  tag: 2baa713dfc2e247d1f93380fcab443d9255f2bcb
+  tag: 97f08ae82335b9645ffd9ca89bf1187033265a9f
   subdir: reflex-dom-core
 
 allow-newer: base, containers, ghc-bignum, ghc-experimental, template-haskell, time
