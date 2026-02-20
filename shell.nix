@@ -18,7 +18,7 @@ mkShell rec {
         # libsepol.dev
         # libthai.dev
         # libdatrie.dev
-        # xorg.libXdmcp.dev
+        # libxdmcp.dev
         # lerc.dev
         # libxkbcommon.dev
         # libepoxy.dev
